@@ -1,17 +1,30 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## 환경
+
+- node 22.1.0
+- npm 10.7.0
+
+## 실행
+
+json-server 실행
+
+```bash
+npx json-server --port 9999 --watch db.json
+```
+
+프로젝트 실행
+
+```bash
+npm run dev
+```
+
 ## Getting Started
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
