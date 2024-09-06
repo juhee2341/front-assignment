@@ -1,5 +1,5 @@
 import { Button } from "@components/Button";
-import { Checkbox } from "@components/Checkbox";
+import { Checkbox } from "@components/Checkbox/Checkbox";
 import { Box, Card, Flex, Heading, Table, Text } from "@radix-ui/themes";
 import { Todo } from "@types/todoList";
 
@@ -39,7 +39,7 @@ export default async function Page() {
             <Card size="3">
               <Flex direction="row" justify="between">
                 <Flex align="center">
-                  <Checkbox checked={todoList?.[0].isDone} readOnly />
+                  <Checkbox defaultChecked />
                   <Text as="p" size="2" ml="2">
                     {todoList?.[0].title}
                   </Text>
