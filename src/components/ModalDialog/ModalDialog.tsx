@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@components/Button";
 import { Dialog, Flex } from "@radix-ui/themes";
+import styles from "./ModalDialog.module.scss";
 
 type ModalDialogProps = {
   triggerBtnText: string;
@@ -23,8 +24,12 @@ export const ModalDialog = ({
         <Button>{triggerBtnText}</Button>
       </Dialog.Trigger>
       <Dialog.Content maxWidth="450px">
-        <Flex justify="between" align="center">
-          <Dialog.Title className="mb-0">{title}</Dialog.Title>
+        <Flex
+          justify="between"
+          align="center"
+          className={styles.dialogTitleContainer}
+        >
+          <Dialog.Title className={styles.dialogTitle}>{title}</Dialog.Title>
           <Dialog.Close>
             <Button variant="dangerous" size="small">
               ✕
