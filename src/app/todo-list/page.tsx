@@ -10,7 +10,7 @@ import {
   TextArea,
   TextField,
 } from "@radix-ui/themes";
-import { createTodo, getTotalTodoList } from "apis/todo";
+import { createTodo, getTotalTodoList } from "@apis/todo";
 
 export default async function Page() {
   const todoList = await getTotalTodoList();

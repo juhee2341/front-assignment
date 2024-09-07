@@ -17,12 +17,6 @@
       "updateDt": ""
     },
     {
-      "id": "NypLaEt"
-    },
-    {
-      "id": "-vHVljv"
-    },
-    {
       "title": "등록 테스트",
       "contents": "일정 내용이에요!",
       "isDone": false,
@@ -36,6 +30,22 @@
       "contents": "복숭아 반쪽 먹기",
       "isDone": false,
       "createDt": "2024-09-07T11:24:44.655Z",
+      "updateDt": ""
+    },
+    {
+      "id": "1725711632018-4476",
+      "title": "",
+      "contents": "",
+      "isDone": false,
+      "createDt": "2024-09-07T12:20:32.018Z",
+      "updateDt": ""
+    },
+    {
+      "id": "1725711642117-4666",
+      "title": "",
+      "contents": "",
+      "isDone": false,
+      "createDt": "2024-09-07T12:20:42.117Z",
       "updateDt": ""
     }
   ]
