@@ -46,18 +46,7 @@ export async function updateTodo(formData: FormData): Promise<Todo> {
 }
 
 export async function deleteTodo(id: string) {
-  try {
-    const response = await fetchUtil(`/list/${id}`, {
-      method: "DELETE",
-    });
-
-    if (!response.ok) {
-      throw new Error("Failed to delete todo");
-    }
-
-    return await response.json();
-  } catch (error) {
-    console.error("Error deleting todo:", error);
-    throw error;
-  }
+  return await fetchUtil(`/list/${id}`, {
+    method: "DELETE",
+  });
 }

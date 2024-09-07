@@ -1,22 +1,6 @@
 {
   "list": [
     {
-      "id": "1",
-      "title": "밥먹기",
-      "contents": "김치찌개 먹기",
-      "isDone": false,
-      "createDt": "2024-09-04",
-      "updateDt": "2024-09-07T13:07:03.284Z"
-    },
-    {
-      "id": "2",
-      "title": "잠자기",
-      "contents": "7시간 이상자기",
-      "isDone": false,
-      "createDt": "2024-09-05",
-      "updateDt": ""
-    },
-    {
       "title": "등록 테스트",
       "contents": "일정 내용이에요!",
       "isDone": false,

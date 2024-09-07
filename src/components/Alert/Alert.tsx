@@ -23,7 +23,7 @@ export const Alert = ({ triggerBtnText, alertText, okFn }: AlertProps) => {
             <Button variant="dangerous">Cancel</Button>
           </AlertDialog.Cancel>
           <AlertDialog.Action>
-            <Button onClick={okFn}>OK</Button>
+            <Button onClick={() => okFn()}>OK</Button>
           </AlertDialog.Action>
         </Flex>
       </AlertDialog.Content>
