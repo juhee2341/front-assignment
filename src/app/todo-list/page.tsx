@@ -1,7 +1,17 @@
 import { Button } from "@components/Button";
-import { Checkbox } from "@components/Checkbox/Checkbox";
-import { Box, Card, Flex, Heading, Table, Text } from "@radix-ui/themes";
+import { Checkbox } from "@components/Checkbox";
+import { ModalDialog } from "@components/ModalDialog";
+import {
+  Card,
+  Flex,
+  Heading,
+  Table,
+  Text,
+  TextArea,
+  TextField,
+} from "@radix-ui/themes";
 import { Todo } from "@types/todoList";
+import { createTodo } from "apis/todo";
 
 async function fetchTotalTodoList() {
   try {
@@ -22,6 +32,7 @@ async function fetchTotalTodoList() {
 
 export default async function Page() {
   const todoList = await fetchTotalTodoList();
+
   return (
     <Flex align="center" gap="6">
       <Flex flexShrink="0" gap="6" direction="column" width="640px">
@@ -32,8 +43,27 @@ export default async function Page() {
           <Text as="p" size="2" mb="5" color="gray">
             Todo List를 작성해보자.
           </Text>
+          <Flex>Form Test</Flex>
           <Flex gap="3" mb="5" justify="end">
-            <Button>Create</Button>
+            <ModalDialog
+              triggerBtnText="Create"
+              title="Create todo"
+              contents={
+                <Flex direction="column" gap="3">
+                  <TextField.Root
+                    name="title"
+                    radius="large"
+                    placeholder="일정 제목을 입력해주세요."
+                  />
+                  <TextArea
+                    name="contents"
+                    radius="large"
+                    placeholder="일정 내용을 입력해주세요."
+                  />
+                </Flex>
+              }
+              formAction={createTodo}
+            />
           </Flex>
           <Flex direction="column">
             <Card size="3">
