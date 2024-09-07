@@ -6,7 +6,7 @@ import { AlertDialog, Flex } from "@radix-ui/themes";
 type AlertProps = {
   triggerBtnText: string;
   alertText: string;
-  okFn?: () => void;
+  okFn: () => void;
 };
 
 export const Alert = ({ triggerBtnText, alertText, okFn }: AlertProps) => {

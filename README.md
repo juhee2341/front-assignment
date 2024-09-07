@@ -19,6 +19,13 @@ npx json-server --port 9999 --watch db.json
 npm run dev
 ```
 
+안녕하세요. 지원자 이주희입니다.
+nextjs 공부한지 얼마 안되어서 결과물이 미흡한 점 죄송합니다.
+과제 이후에도 지속적으로 학습하여 개별적으로 과제 모든 기능 개발할 예정입니다.
+
+과제 참여할 수 있게 되어서 영광이었습니다.
+감사합니다.
+
 ## Getting Started
 
 First, run the development server:

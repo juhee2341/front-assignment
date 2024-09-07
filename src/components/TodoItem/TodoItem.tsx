@@ -12,7 +12,7 @@ type TodoItem = {
 export const TodoItem = ({ todoItem }: TodoItem) => {
   const handleDeleteTodo = async () => {
     "use server";
-    const { result } = await deleteTodo(todoItem?.id);
+    await deleteTodo(todoItem?.id);
   };
   return (
     <Card size="3">
