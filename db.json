@@ -4,9 +4,9 @@
       "id": "1",
       "title": "밥먹기",
       "contents": "김치찌개 먹기",
-      "isDone": true,
+      "isDone": false,
       "createDt": "2024-09-04",
-      "updateDt": "2024-09-07T12:54:14.375Z"
+      "updateDt": "2024-09-07T13:07:03.284Z"
     },
     {
       "id": "2",
@@ -30,22 +30,6 @@
       "contents": "복숭아 반쪽 먹기",
       "isDone": false,
       "createDt": "2024-09-07T11:24:44.655Z",
-      "updateDt": ""
-    },
-    {
-      "id": "1725711632018-4476",
-      "title": "",
-      "contents": "",
-      "isDone": false,
-      "createDt": "2024-09-07T12:20:32.018Z",
-      "updateDt": ""
-    },
-    {
-      "id": "1725711642117-4666",
-      "title": "",
-      "contents": "",
-      "isDone": false,
-      "createDt": "2024-09-07T12:20:42.117Z",
       "updateDt": ""
     }
   ]

@@ -3,6 +3,6 @@ export type Todo = {
   title: string;
   contents: string;
   isDone: boolean;
-  createDt: string;
+  createDt?: string;
   updateDt?: string;
 };

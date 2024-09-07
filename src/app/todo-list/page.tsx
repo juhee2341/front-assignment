@@ -1,5 +1,3 @@
-import { Button } from "@components/Button";
-import { Checkbox } from "@components/Checkbox";
 import { ModalDialog } from "@components/ModalDialog";
 import { TodoTable } from "@components/TodoTable";
 import {
@@ -11,10 +9,10 @@ import {
   TextField,
 } from "@radix-ui/themes";
 import { createTodo, getTotalTodoList } from "@apis/todo";
+import { TodoItem } from "@components/TodoItem/TodoItem";
 
 export default async function Page() {
   const todoList = await getTotalTodoList();
-
   return (
     <Flex align="center" gap="6">
       <Flex flexShrink="0" gap="6" direction="column" width="640px">
@@ -47,29 +45,7 @@ export default async function Page() {
             />
           </Flex>
           <Flex direction="column">
-            <Card size="3">
-              <Flex direction="row" justify="between">
-                <Flex align="center">
-                  <Checkbox
-                    id={todoList?.[0].id}
-                    defaultChecked={todoList?.[0].isDone}
-                  />
-                  <Text as="p" size="2" ml="2">
-                    {todoList?.[0].title}
-                  </Text>
-                </Flex>
-                <Flex gap="2">
-                  <Button size="small">Update</Button>
-                  <Button size="small" variant="dangerous">
-                    Delete
-                  </Button>
-                </Flex>
-              </Flex>
-              <hr className="border-t border-gray-300 my-4" />
-              <Text as="p" size="2" ml="2">
-                {todoList?.[0].contents}
-              </Text>
-            </Card>
+            <TodoItem todoItem={todoList?.[0]} />
           </Flex>
           <Flex direction="column">
             <TodoTable todoList={todoList} />

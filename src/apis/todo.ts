@@ -26,3 +26,38 @@ export async function createTodo(formData: FormData): Promise<Todo> {
     body: JSON.stringify(newTodo),
   });
 }
+
+export async function updateTodo(formData: FormData): Promise<Todo> {
+  "use server";
+  const id = formData.get("id") as string;
+  const title = formData.get("title") as string;
+  const contents = formData.get("contents") as string;
+
+  const newTodo = {
+    title,
+    contents,
+    updateDt: new Date().toISOString(),
+  };
+
+  return await fetchUtil(`/list/${id}`, {
+    method: "PATCH",
+    body: JSON.stringify(newTodo),
+  });
+}
+
+export async function deleteTodo(id: string) {
+  try {
+    const response = await fetchUtil(`/list/${id}`, {
+      method: "DELETE",
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to delete todo");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error deleting todo:", error);
+    throw error;
+  }
+}
