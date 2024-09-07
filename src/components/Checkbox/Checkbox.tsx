@@ -2,8 +2,10 @@
 
 import React, { useState, InputHTMLAttributes } from "react";
 import styles from "./Checkbox.module.scss";
+import { fetchUtil } from "@utils/fetchUtil";
 
 type CheckboxProps = {
+  id: string;
   label?: string;
   defaultChecked: boolean;
 } & InputHTMLAttributes<HTMLInputElement>; // HTMLInputElement에 기본적으로 제공되는 입력 요소의 속성들을 포함
@@ -15,14 +17,26 @@ type CheckboxProps = {
  * @property {string} label - 체크박스 옆에 표시할 레이블 텍스트
  */
 export const Checkbox = ({
-  defaultChecked = false,
+  id,
   label,
+  defaultChecked = false,
   ...props
 }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(defaultChecked);
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
+  const handleCheckboxChange = async () => {
+    const newCheckedStatus = !isChecked;
+    setIsChecked(newCheckedStatus);
+
+    const updateIsDone = {
+      isDone: newCheckedStatus,
+      updateDt: new Date().toISOString(),
+    };
+
+    return await fetchUtil(`/list/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify(updateIsDone),
+    });
   };
 
   return (

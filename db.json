@@ -4,9 +4,9 @@
       "id": "1",
       "title": "밥먹기",
       "contents": "김치찌개 먹기",
-      "isDone": false,
+      "isDone": true,
       "createDt": "2024-09-04",
-      "updateDt": ""
+      "updateDt": "2024-09-07T12:54:14.375Z"
     },
     {
       "id": "2",

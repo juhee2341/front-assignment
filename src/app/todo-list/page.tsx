@@ -50,7 +50,10 @@ export default async function Page() {
             <Card size="3">
               <Flex direction="row" justify="between">
                 <Flex align="center">
-                  <Checkbox defaultChecked />
+                  <Checkbox
+                    id={todoList?.[0].id}
+                    defaultChecked={todoList?.[0].isDone}
+                  />
                   <Text as="p" size="2" ml="2">
                     {todoList?.[0].title}
                   </Text>

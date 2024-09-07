@@ -8,6 +8,7 @@ export async function fetchUtil(
   try {
     const response = await fetch(baseURL + url, {
       ...options,
+      cache: "no-cache",
       headers: {
         "Content-Type": "application/json",
         ...(options.headers || {}),
