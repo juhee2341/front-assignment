@@ -11,6 +11,15 @@ type ModalDialogProps = {
   formAction: (formData: FormData) => void;
 };
 
+/**
+ * ModalDialog 컴포넌트
+ * @param {Object} ModalDialogProps
+ * @property {string} triggerBtnText - ModalDialog 을 trigger 버튼의 텍스트
+ * @property {string} title - ModalDialog 제목
+ * @property {React.ReactNode} contents - ModalDialog 컨텐츠
+ * @property {string} submitButtonText - 하단의 제출 버튼 텍스트 (defualt: Sumbit)
+ * @property {(formData: FormData) => void} formAction - 제출 시 동작 할 api 함수
+ */
 export const ModalDialog = ({
   triggerBtnText,
   title,

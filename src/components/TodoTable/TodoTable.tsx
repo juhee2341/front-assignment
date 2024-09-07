@@ -5,6 +5,11 @@ type TodoTableProps = {
   todoList: Todo[];
 };
 
+/**
+ * 테이블 컴포넌트
+ * @param {Object} TodoTableProps
+ * @property {Todo[]} todoList - 표기 할 데이터 (헤더 부분 제외)
+ */
 export const TodoTable = ({ todoList }: TodoTableProps) => {
   return (
     <Table.Root variant="surface">
