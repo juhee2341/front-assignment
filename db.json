@@ -1,19 +1,19 @@
 {
   "list": [
     {
-      "title": "등록 테스트",
-      "contents": "일정 내용이에요!",
-      "isDone": false,
-      "createDt": "2024-09-07T11:17:00.362Z",
-      "updateDt": "",
-      "id": "HvNpvHE"
+      "id": "1726068419411-5943",
+      "title": "명상하기",
+      "contents": "20분 명상",
+      "isDone": true,
+      "createDt": "2024-09-11T15:26:59.411Z",
+      "updateDt": "2024-09-11T16:40:43.630Z"
     },
     {
-      "id": "1725708284655-4792",
-      "title": "과일 먹기",
-      "contents": "복숭아 반쪽 먹기",
+      "id": "1726068579384-1221",
+      "title": "공부하기",
+      "contents": "nextjs 공부하기",
       "isDone": false,
-      "createDt": "2024-09-07T11:24:44.655Z",
+      "createDt": "2024-09-11T15:29:39.384Z",
       "updateDt": ""
     }
   ]

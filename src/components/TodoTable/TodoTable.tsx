@@ -1,5 +1,5 @@
 import { Table } from "@radix-ui/themes";
-import { Todo } from "@types/todoList";
+import { Todo } from "@type/todoList";
 
 type TodoTableProps = {
   todoList: Todo[];

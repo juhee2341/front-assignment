@@ -2,7 +2,8 @@
 
 import React, { useState, InputHTMLAttributes } from "react";
 import styles from "./Checkbox.module.scss";
-import { fetchUtil } from "@utils/fetchUtil";
+import { updateTodoStatus } from "@apis/noAction";
+import { updateTodoStatus2 } from "@apis/todo";
 
 type CheckboxProps = {
   id: string;
@@ -28,15 +29,12 @@ export const Checkbox = ({
     const newCheckedStatus = !isChecked;
     setIsChecked(newCheckedStatus);
 
-    const updateIsDone = {
-      isDone: newCheckedStatus,
-      updateDt: new Date().toISOString(),
-    };
+    await updateTodoStatus(id, newCheckedStatus);
 
-    return await fetchUtil(`/list/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify(updateIsDone),
-    });
+    // return await fetchUtil(`/list/${id}`, {
+    //   method: "PATCH",
+    //   body: JSON.stringify(updateIsDone),
+    // });
   };
 
   return (

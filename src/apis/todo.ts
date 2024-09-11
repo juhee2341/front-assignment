@@ -1,4 +1,4 @@
-import { Todo } from "@types/todoList";
+import { Todo } from "@type/todoList";
 import { fetchUtil } from "@utils/fetchUtil";
 
 export async function getTotalTodoList(): Promise<Todo[]> {
@@ -48,5 +48,18 @@ export async function updateTodo(formData: FormData): Promise<Todo> {
 export async function deleteTodo(id: string) {
   return await fetchUtil(`/list/${id}`, {
     method: "DELETE",
+  });
+}
+
+// 만약 checkbox 서버 함수를 분리한다면.
+export async function updateTodoStatus2(id: string, isDone: boolean) {
+  const updateData = {
+    isDone,
+    updateDt: new Date().toISOString(),
+  };
+
+  return await fetchUtil(`/list/${id}`, {
+    method: "PATCH",
+    body: JSON.stringify(updateData),
   });
 }

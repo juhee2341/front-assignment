@@ -3,7 +3,7 @@ import { Alert } from "@components/Alert";
 import { Checkbox } from "@components/Checkbox";
 import { ModalDialog } from "@components/ModalDialog";
 import { Card, Flex, Text, TextArea, TextField } from "@radix-ui/themes";
-import { Todo } from "@types/todoList";
+import { Todo } from "@type/todoList";
 
 type TodoItem = {
   todoItem: Todo;
